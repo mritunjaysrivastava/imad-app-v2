@@ -18,7 +18,11 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/article_one', function(req, res){
-    res.send("Web page linked at server side");
+    res.send("Web page linked at server side at article_one");
+});
+
+app.get('/article_two', function(req, res){
+    res.send("Web page linked at server side at article_two");
 });
 
 

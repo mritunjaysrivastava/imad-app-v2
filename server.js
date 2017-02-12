@@ -54,7 +54,7 @@ function html (data) {
 
 //index.html
 app.get('/ui/index', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'inde.html'));
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 //style.css

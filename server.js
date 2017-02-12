@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 //content
 var content = {
-    title: Merge | js & HTML,
+    title: 'Merge | js & HTML',
     content: `<p>
                     It is able to reduce the code.
                 </p>

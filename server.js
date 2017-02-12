@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 //content
-var content = {
+var merge = {
     title: 'Merge | js & HTML',
     content: `<p>
                     It is able to reduce the code.
@@ -28,7 +28,7 @@ var content = {
 
 function html (data) {
     var title = data.title;
-    var content = data.content;
+    var para = data.content;
     
     var htmlTemplate = `
     <html>
@@ -42,7 +42,7 @@ function html (data) {
                     <h1>Merge | js & HTML</h1>
                 </div>
                 <div>
-                  ${content}
+                  ${para}
                 </div>
             </div>
         </body>
@@ -80,7 +80,7 @@ app.get('/article-one', function (req, res) {
 
 //mergejshtml.html
 app.get('/mergejshtml', function (req, res) {
-  res.send(html(content));
+  res.send(html(merge));
 });
 
 //set port

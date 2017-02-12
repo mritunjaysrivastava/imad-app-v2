@@ -26,7 +26,7 @@ var content = {
 };
 
 
-function html(data) {
+function html (data) {
     var title = data.title;
     var content = data.content;
     

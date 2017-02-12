@@ -53,7 +53,7 @@ function html (data) {
 }
 
 //index.html
-app.get('/', function (req, res) {
+app.get('/ui/index', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 

@@ -8,5 +8,5 @@ element.innerHTML = "DEVIL!";
 //move text
 var img = document.getElementById("madi");
 img.onclick = function() {
-    img.style.marginLeft='10000000px';
+    img.style.marginLeft='100px';
 }; 

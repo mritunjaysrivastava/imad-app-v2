@@ -69,7 +69,7 @@ app.get('/ui/madi.png', function (req, res) {
 
 
 //article-two
-app.get('/article_two', function(req, res){
+app.get('/article-two', function(req, res){
     res.send("Web page linked at server side at article_two");
 });
 

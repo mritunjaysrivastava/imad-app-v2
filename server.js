@@ -49,7 +49,7 @@ function html (data) {
     </html>`
     ;
     
-    return html;
+    return htmlTemplate;
 }
 
 //index.html

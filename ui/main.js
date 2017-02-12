@@ -8,7 +8,7 @@ element.innerHTML = "DEVIL!";
 //move text
 var img = document.getElementById("madi");
 var marginLeft=0;
-function moverRight () {
+function moveRight () {
     marginLeft = marginLeft + 5;
     img.style.marginLeft = marginLeft + 'px';
 } 

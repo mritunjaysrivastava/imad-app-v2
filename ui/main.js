@@ -38,6 +38,6 @@ button.onclick =function () {
     };
     
     //Make a request
-    request.open("GET", "http://mritunjaysri.imad.hausra-app.io/counter", true);
+    request.open('GET', 'http://mritunjaysri.imad.hausra-app.io/counter', true);
     request.send(null);
 };

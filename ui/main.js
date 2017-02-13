@@ -26,10 +26,10 @@ count.onclick =function () {
     
     //capture the request
     request.onreadystatechange = function () {
-      if(request.reasyState == XMLHttpRequest.DONE) {
+      if(request.reasyState === XMLHttpRequest.DONE) {
           
           //action perfromed to respond or render a respond
-          if(request.status == 200) {
+          if(request.status === 200) {
               var res = request.respondText;
               var respond = document.getElementById("count_like");
               respond.innerHTML = res.toString();

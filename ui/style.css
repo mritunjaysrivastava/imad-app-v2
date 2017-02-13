@@ -20,6 +20,10 @@ body {
     height: 200px;
 }
 
+li {
+    text-align:center;
+}
+
 .container {
     max-width:900px;
     color:grey;

@@ -26,7 +26,7 @@ button.onclick =function () {
     
     //capture the request
     request.onreadystatechange = function () {
-      if(request.readyState === XMLHttpRequest.DONE) {
+      if(request.reayState === XMLHttpRequest.DONE) {
           
           //action perfromed to respond or render a respond
           if(request.status === 200) {

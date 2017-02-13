@@ -22,7 +22,7 @@ var button = document.getElementById("counter");
 
 button.onclick =function () {
     //Create a request object
-    var request = XMLHttpRequest();
+    var request = new XMLHttpRequest();
     
     //capture the request
     request.onreadystatechange = function () {

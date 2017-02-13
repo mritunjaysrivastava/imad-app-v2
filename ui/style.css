@@ -22,11 +22,13 @@ body {
 
 li {
     margin-top:10px;
+    text-align:left;
 }
 
 .container {
     max-width:900px;
     color:grey;
     background-color:white;
+    text-align:center;
     margin-left:18%;
 }

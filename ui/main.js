@@ -32,7 +32,7 @@ count.onclick =function () {
           if(request.status === 200) {
               var res = request.respondText;
               var respond = document.getElementById("count_like");
-              respond.innerHTML = "vhgj";
+              respond.innerHTML = res.toString();
           }
       }
     };

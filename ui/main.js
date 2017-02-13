@@ -19,14 +19,15 @@ img.onclick = function() {
 
 //counter per click
 var count = document.getElementById("like");
+
 count.onclick =function () {
-    
-    //Make a request
+    //Create a request object
     var request = XMLHttpRequest();
     
     //capture the request
     request.onreadystatechange = function () {
       if(request.reasyState == XMLHttpRequest.DONE) {
+          
           //action perfromed to respond or render a respond
           if(request.status == 200) {
               var res = request.respondText;
@@ -35,5 +36,8 @@ count.onclick =function () {
           }
       }
     };
+    
+    //Make a request
+    request.open("GET", "http://mritunjaysri.imad.hausra-app.io", true);
+    request.send(null);
 };
-

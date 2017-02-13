@@ -37,7 +37,7 @@ function html (data) {
             <link href="/ui/style.css" rel="stylesheet" />
         </head>
         <body>
-            <div class="container, center">
+            <div class="container & center">
                 <div>
                     <h1>Merge | js & HTML</h1>
                 </div>

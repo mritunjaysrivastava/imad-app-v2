@@ -18,15 +18,15 @@ img.onclick = function() {
 }; 
 
 //counter per click
-var count = document.getElementById("like");
+var button = document.getElementById("counter");
 
-count.onclick =function () {
+button.onclick =function () {
     //Create a request object
     var request = XMLHttpRequest();
     
     //capture the request
     request.onreadystatechange = function () {
-      if(request.reasyState === XMLHttpRequest.DONE) {
+      if(request.readyState === XMLHttpRequest.DONE) {
           
           //action perfromed to respond or render a respond
           if(request.status === 200) {

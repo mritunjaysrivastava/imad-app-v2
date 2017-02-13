@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-//content
+//content details
 var merge = {
     title: 'Merge | js & HTML',
     content: `<p>
@@ -25,7 +25,7 @@ var merge = {
                 </p>`
 };
 
-
+//merge Html and java_script 
 function html (data) {
     var title = data.title;
     var para = data.content;
@@ -86,6 +86,13 @@ app.get('/mergejshtml', function (req, res) {
 //main.js
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+});
+
+//counter
+var counter=0;
+app.get('/counter', function(req, res){
+    counter = counter + 1;
+    res.send(counter.toString());   //toString() convert int to string.
 });
 
 //set port

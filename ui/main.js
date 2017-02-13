@@ -18,11 +18,24 @@ img.onclick = function() {
 }; 
 
 //counter per click
-var count = document.getElementById("counter");
-var counter = 0;
-function count() {
-    counter = counter + 1;
-    count.innerHTML = counter;
-}
+var count = document.getElementById("like");
+count.onclick =function () {
+    
+    //Make a request
+    var request = XMLHttpRequest();
+    
+    //capture the request
+    request.onreadystatechange = function () {
+      if(request.reasyState == XMLHttpRequest.DONE) {
+          //action perfromed to respond or render a respond
+          if(request.status == 200) {
+              var res = request.respondText;
+              var respond = document.getElementById("count_like");
+              respond.innerHTML = res.toString();
+          }
+      }
+    };
+    
+};
 
 

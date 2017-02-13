@@ -35,7 +35,5 @@ count.onclick =function () {
           }
       }
     };
-    
 };
-
 

@@ -17,6 +17,7 @@ img.onclick = function() {
     var interval = setInterval(moveRight, 50);
 }; 
 
+
 //counter per click
 var button = document.getElementById("counter");
 

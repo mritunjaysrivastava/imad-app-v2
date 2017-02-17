@@ -92,7 +92,7 @@ app.get('/ui/main.js', function (req, res) {
 var counter=0;
 app.get('/counter', function(req, res){
     counter = counter + 1;
-    res.send(counter.toString());   //toString() convert int to string.
+    res.send(counter.toString());                   //toString() convert int to string.
 });
 
 //set port

@@ -9,7 +9,7 @@ app.use(morgan('combined'));
 var merge = {
     title: 'Merge | js & HTML',
     content: `<p>
-                    It is able to reduce the code.
+                    It is able to reduce the code comlexity.
                 </p>
                 <p>
                     It decrease the number of files.
@@ -18,7 +18,7 @@ var merge = {
                     It reduce the space complextiy. 
                 </p>
                 <p>
-                    It allow to design multiple page on one page
+                    It allow to design multiple page on one page.
                 </p>
                 <p>
                     <a href="/">Home</a>

@@ -14,7 +14,7 @@ function moveRight () {
         img.style.marginLeft = marginLeft + 'px';
     }
     else {
-        img.style.marginLeft = '100px';
+        img.style.marginLeft = 100 + 'px';
         var interval = setInterval(moveRight, 50);
     }
 } 

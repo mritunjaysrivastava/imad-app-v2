@@ -9,8 +9,13 @@ element.innerHTML = "DEVIL";
 var img = document.getElementById("madi");
 var marginLeft=0;
 function moveRight () {
-    marginLeft = marginLeft + 5;
-    img.style.marginLeft = marginLeft + 'px';
+    if(marginLeft<660){
+        marginLeft = marginLeft + 5;
+        img.style.marginLeft = marginLeft + 'px';
+    }
+    else {
+        marginLeft = '100px';
+    }
 } 
 
 img.onclick = function() {

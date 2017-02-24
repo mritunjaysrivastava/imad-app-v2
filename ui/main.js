@@ -14,7 +14,7 @@ function moveRight () {
         img.style.marginLeft = marginLeft + 'px';
     }
     else {
-        marginLeft = 550;
+        marginLeft = 100;
     }
 } 
 

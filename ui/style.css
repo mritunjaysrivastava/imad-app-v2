@@ -6,8 +6,6 @@ body {
 
 .center {
     text-align: center;
-    height: 1024px;
-    width: 550px;
 }
 
 .text-big {
@@ -34,7 +32,8 @@ li {
     text-align:center;
     margin-left:18%;
 }
-/*
+
 #madi::hover {
-    
-}*/
+    height: 1024px;
+    width: 550px;
+}

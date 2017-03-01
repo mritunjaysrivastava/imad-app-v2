@@ -33,7 +33,7 @@ li {
     margin-left:18%;
 }
 
-a::hover {
+a:hover {
     height: 1024px;
     width: 550px;
     font-weight:bold;

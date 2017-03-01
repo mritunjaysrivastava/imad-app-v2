@@ -33,7 +33,7 @@ li {
     margin-left:18%;
 }
 
-#madi::hover {
+a::hover {
     height: 1024px;
     width: 550px;
     background-color:blue;

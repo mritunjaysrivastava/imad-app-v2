@@ -11,7 +11,7 @@ var Pool = require('pg').Pool;  //import db-connection
 var config = {
     host: 'db.imad.hausra-app.io',
     user: 'mritunjaysri',
-    password: process.emv.DB.PASSWORD,
+    password: 'db-mritunjaysri-34582',
     database: 'mritunjaysri',
     port: '5432'
 };

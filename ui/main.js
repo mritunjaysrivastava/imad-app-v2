@@ -5,6 +5,17 @@ console.log('Loaded!');
 var element = document.getElementById("main-text");
 element.innerHTML = "DEVIL";
 
+//count like
+var button = document.getElementById("counter");
+var counter = 0;
+
+button.onclick = function () {
+    counter = counter + 1;
+    var span = document.getElementById("count");
+    span.innerHTML = counter.toString();
+};
+
+
 //move text
 var img = document.getElementById("madi");
 var marginLeft=0;

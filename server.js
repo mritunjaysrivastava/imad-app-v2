@@ -5,6 +5,30 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var Pool = require('pg').Pool;  //import db-connection
+
+//config db
+var config = {
+    host: 'db.imad.hausra-app.io',
+    user: 'mritunjaysri',
+    password: process.emv.DB.PASSWORD,
+    database: 'mritunjaysri',
+    port: '5432'
+};
+
+//db connection establish
+var pool = new Pool(config);
+app.get('/test-db', function(req, res){
+   pool.query('SELECT * FROM test', function(err, result){  //make a request
+       if (err) {
+           res.status(500).send(err.toString());
+       } else {
+           res.send(JSON.stringfy(result));
+       }
+   });
+   //return with response with result
+});
+
 //content details
 var merge = {
     title: 'Merge | js & HTML',

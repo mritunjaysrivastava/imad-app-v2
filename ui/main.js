@@ -21,6 +21,7 @@ button.onclick = function () {
     
     request.open('GET',"http://mritunjaysri.imad.hasura-app.io/counter",true);
     request.send(null);
+    alert(counte.toString());
 };
 
 //count like

@@ -2,9 +2,6 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
-var app = express();
-app.use(morgan('combined'));
-
 var Pool = require('pg').Pool;  //import db-connection
 
 //config db
@@ -28,6 +25,9 @@ app.get('/test-db', function(req, res){
    });
    //return with response with result
 });
+
+var app = express();
+app.use(morgan('combined'));
 
 //content details
 var merge = {

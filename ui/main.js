@@ -31,7 +31,7 @@ button.onclick = function () {
     
     request.open('GET',"http://mritunjaysri.imad.hasura-app.io/counter",true);
     request.send(null);
-    alert(counter);
+    alert(counter.toString());
 };
 
 //move text

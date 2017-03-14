@@ -6,24 +6,23 @@ var Pool = require('pg').Pool;  //import db-connection
 
 //config db
 var config = {
-    host: 'db.imad.hausra-app.io',
     user: 'mritunjaysri',
-    password: process.env.DB_PASSWORD,
     database: 'mritunjaysri',
-    port: '5432'
+    host: 'db.imad.hasura-app.io',
+    port: '5432',
+    password: process.env.DB_PASSWORD
 };
 
 //db connection establish
 var pool = new Pool(config);
 app.get('/test-db', function(req, res){
-   pool.query('SELECT * FROM test', function(err, result){  //make a request
-       if (err) {
-           res.status(500).send(err.toString());
-       } else {
-           res.send(JSON.stringify(result));
-       }
+   pool.query('SELECT * FROM test', function(err, result){       //make a request
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          res.send(JSON.stringify(result.rows));               //return with response with result
+      }
    });
-   //return with response with result
 });
 
 var app = express();

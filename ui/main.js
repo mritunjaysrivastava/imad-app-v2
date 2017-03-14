@@ -25,13 +25,11 @@ button.onclick = function () {
                 var counter = request.responseText;
                 var span = document.getElementById('count');
                 span.innerHTML = counter.toString();
-                console.log('Loaded!');
             }
         }
     };
     
     request.open('GET',"http://mritunjaysri.imad.hasura-app.io/counter",true);
-    console.log('Loaded!');
     request.send(null);
 };
 

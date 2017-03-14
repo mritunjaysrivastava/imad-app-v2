@@ -18,7 +18,7 @@ button.onclick = function () {
 var button = document.getElementById("vcounter");
 var counter = 0;
 button.onclick = function () {
-    var request = XMLHttpRequest();
+    var request = new XMLHttpRequest();
     request.onreadystateChange = function () {
         if(request.readyState === XMLHttpRequest.DONE) {
             if(request.status === 200) {

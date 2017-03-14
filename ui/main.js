@@ -5,15 +5,6 @@ console.log('Loaded!');
 var element = document.getElementById("main-text");
 element.innerHTML = "DEVIL";
 
-//count like
-var button = document.getElementById("lcounter");
-var counter = 0;
-button.onclick = function () {
-    counter = counter + 1;
-    var span = document.getElementById("lcount");
-    span.innerHTML = counter.toString();
-};
-
 //count visit
 var button = document.getElementById("counter");
 button.onclick = function () {
@@ -32,6 +23,17 @@ button.onclick = function () {
     request.send(null);
     alert(counter.toString());
 };
+
+//count like
+var button = document.getElementById("lcounter");
+var counter = 0;
+button.onclick = function () {
+    counter = counter + 1;
+    var span = document.getElementById("lcount");
+    span.innerHTML = counter.toString();
+};
+
+
 
 //move text
 var img = document.getElementById("madi");

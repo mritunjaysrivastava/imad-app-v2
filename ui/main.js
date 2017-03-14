@@ -20,10 +20,12 @@ button.onclick = function () {
     var request = new XMLHttpRequest();
     request.onreadystateChange = function () {
         if(request.readyState === XMLHttpRequest.DONE) {
+            console.log('Loaded!');
             if(request.status === 200) {
                 var counter = request.responseText;
                 var span = document.getElementById('count');
                 span.innerHTML = counter;
+                console.log('Loaded!');
             }
         }
     };

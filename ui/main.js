@@ -29,7 +29,7 @@ button.onclick = function () {
         }
     };
     
-    request.open('GET',"http:/http://navhits.imad.hasura-app.io/counter",true);
+    request.open('GET',"http://mritunjaysri.imad.hasura-app.io/counter",true);
     request.send(null);
 };
 

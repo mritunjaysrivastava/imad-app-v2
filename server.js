@@ -17,7 +17,7 @@ var app = express();
 app.use(morgan('combined'));
 
 //content details
-var article = {
+var articles = {
     'article-one': {
     title: 'Article-One',
     heading: 'Article-One',
@@ -108,12 +108,6 @@ app.get('/:articleName', function (req, res) {
     res.send(createTemplate(article(articleName)));
 });
 
-//article-two
-app.get('/article-two', function(req, res){
-    res.send("Web page linked at server side at article_two");
-});
-
-//article-one
 app.get('/article-one', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 });

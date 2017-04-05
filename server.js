@@ -16,53 +16,6 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-//content details
-var merge = {
-    title: 'Merge | js & HTML',
-    content: `<p>
-                    It is able to reduce the code comlexity.
-                </p>
-                <p>
-                    It decrease the number of files.
-                </p>
-                <p>
-                    It reduce the space complextiy. 
-                </p>
-                <p>
-                    It allow to design multiple page on one page.
-                </p>
-                <p>
-                    <a href="/">Home</a>
-                </p>`
-};
-
-//merge Html and java_script 
-function html (data) {
-    var title = data.title;
-    var para = data.content;
-    
-    var htmlTemplate = `
-    <html>
-        <head>
-            <title>${title}</title>
-            <link href="/ui/style.css" rel="stylesheet" />
-        </head>
-        <body>
-            <div class="container">
-                <div>
-                    <h1>Merge | js & HTML</h1>
-                </div>
-                <div>
-                  ${para}
-                </div>
-            </div>
-        </body>
-    </html>`
-    ;
-    
-    return htmlTemplate;
-}
-
 //index.html
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -88,22 +41,6 @@ app.get('/ui/style.css', function (req, res) {
 //madi.png
 app.get('/ui/Profile.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Profile.jpg'));
-});
-
-
-//article-two
-app.get('/article-two', function(req, res){
-    res.send("Web page linked at server side at article_two");
-});
-
-//article-one
-app.get('/article-one', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
-});
-
-//mergejshtml.html
-app.get('/mergejshtml', function (req, res) {
-  res.send(html(merge));
 });
 
 //main.js

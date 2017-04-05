@@ -105,7 +105,7 @@ app.get('/test-db', function(req, res){
 //mergejshtml.html
 app.get('/:articleName', function (req, res) {
     var articleName = req.params.articleName;
-    res.send(createTemplate(articles(articleName)));
+    res.send(createTemplate(articles[articleName]));
 });
 
 //counter

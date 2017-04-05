@@ -104,6 +104,13 @@ app.get('/test-db', function(req, res){
 
 //mergejshtml.html
 app.get('/articles/:articleName', function (req, res) {
+    var articleNmae = req.params.articleName;
+    res.send(createTemplate(articles[articleName]));
+});
+
+
+//db content
+app.get('/articles/:articleName', function (req, res) {
     pool.query('SELECT * FROM article where title' + req.params.articleName, function(err, result){       //make a request
       if (err) {
           res.status(500).send(err.toString());
@@ -111,7 +118,7 @@ app.get('/articles/:articleName', function (req, res) {
           res.send(JSON.stringify(result.rows));               //return with response with result
       }
    });
-    res.send(createTemplate(articles[articleName]));
+    res.send(createTemplate(articlesData));
 });
 
 //counter

@@ -111,7 +111,7 @@ app.get('/:articleName', function (req, res) {
 
 //db content
 app.get('/articles/:articleName', function (req, res) {
-    pool.query('SELECT * FROM article where title = ' + req.params.articleName, function(err, result){       //make a request
+    pool.query("SELECT * FROM article where title = '" + req.params.articleName + "'", function(err, result){       //make a request
       if (err) {
           res.status(500).send(err.toString());
       } else {

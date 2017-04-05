@@ -103,7 +103,7 @@ app.get('/test-db', function(req, res){
 });
 
 //mergejshtml.html
-app.get('/articles/:articleName', function (req, res) {
+app.get('/:articleName', function (req, res) {
     var articleNmae = req.params.articleName;
     res.send(createTemplate(articles[articleName]));
 });

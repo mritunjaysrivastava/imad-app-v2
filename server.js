@@ -10,7 +10,7 @@ var config = {
     database: 'mritunjaysri',
     host: 'db.imad.hasura-app.io',
     port: '5432',
-    password: process.env.DB_PASSWORD
+    password: 'db-mritunjaysri-34582'
 };
 
 var app = express();

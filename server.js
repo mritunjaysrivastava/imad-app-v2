@@ -17,8 +17,10 @@ var app = express();
 app.use(morgan('combined'));
 
 //content details
-var merge = {
+var articleOne = {
     title: 'Merge | js & HTML',
+    heading: 'Article-One',
+    date: 'Sep 5, 2016',
     content: `<p>
                     It is able to reduce the code comlexity.
                 </p>
@@ -37,9 +39,11 @@ var merge = {
 };
 
 //merge Html and java_script 
-function html (data) {
+function createTemplate (data) {
     var title = data.title;
-    var para = data.content;
+    var heading = data.heading;
+    var date = data.date;
+    var content = data.content;
     
     var htmlTemplate = `
     <html>
@@ -50,10 +54,13 @@ function html (data) {
         <body>
             <div class="container">
                 <div>
-                    <h1>Merge | js & HTML</h1>
+                    ${heading}
                 </div>
                 <div>
-                  ${para}
+                    ${date}
+                </div>
+                <div>
+                  ${content}
                 </div>
             </div>
         </body>
@@ -80,17 +87,6 @@ app.get('/test-db', function(req, res){
    });
 });
 
-//style.css
-app.get('/ui/style.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
-});
-
-//madi.png
-app.get('/ui/Profile.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'Profile.jpg'));
-});
-
-
 //article-two
 app.get('/article-two', function(req, res){
     res.send("Web page linked at server side at article_two");
@@ -103,12 +99,7 @@ app.get('/article-one', function (req, res) {
 
 //mergejshtml.html
 app.get('/mergejshtml', function (req, res) {
-  res.send(html(merge));
-});
-
-//main.js
-app.get('/ui/main.js', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+  res.send(createTemplate(articleOne));
 });
 
 //counter
@@ -116,6 +107,21 @@ var counter=0;
 app.get('/counter', function(req, res){
     counter = counter + 1;
     res.send(counter.toString());                   //toString() convert int to string.
+});
+
+//style.css
+app.get('/ui/style.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+});
+
+//madi.png
+app.get('/ui/Profile.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'Profile.jpg'));
+});
+
+//main.js
+app.get('/ui/main.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
 //set port

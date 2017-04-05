@@ -17,25 +17,40 @@ var app = express();
 app.use(morgan('combined'));
 
 //content details
-var articleOne = {
-    title: 'Merge | js & HTML',
+var article = {
+    'article-one': {
+    title: 'Article-One',
     heading: 'Article-One',
     date: 'Sep 5, 2016',
     content: `<p>
-                    It is able to reduce the code comlexity.
-                </p>
-                <p>
-                    It decrease the number of files.
-                </p>
-                <p>
-                    It reduce the space complextiy. 
-                </p>
-                <p>
-                    It allow to design multiple page on one page.
+                    Thies is One Article.
                 </p>
                 <p>
                     <a href="/">Home</a>
                 </p>`
+    },
+    'article-two': {
+        title: 'Aritcle-Two',
+        heading: 'Article-Two',
+        date: 'Sep 5, 2016',
+        content: `<p>
+                    Thies is Second Article.
+                </p>
+                <p>
+                    <a href="/">Home</a>
+                </p>`
+    },
+    'article-three': {
+        title: 'Article-Three',
+        heading: 'Article-Three',
+        date: 'Sep 5, 2016',
+        content: `<p>
+                    Thies is Three Article.
+                </p>
+                <p>
+                    <a href="/">Home</a>
+                </p>`
+    }
 };
 
 //merge Html and java_script 
@@ -87,6 +102,12 @@ app.get('/test-db', function(req, res){
    });
 });
 
+//mergejshtml.html
+app.get('/:articleName', function (req, res) {
+    var articleName = req.params.articleName;
+    res.send(createTemplate(article(articleName)));
+});
+
 //article-two
 app.get('/article-two', function(req, res){
     res.send("Web page linked at server side at article_two");
@@ -95,11 +116,6 @@ app.get('/article-two', function(req, res){
 //article-one
 app.get('/article-one', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
-});
-
-//mergejshtml.html
-app.get('/mergejshtml', function (req, res) {
-  res.send(createTemplate(articleOne));
 });
 
 //counter

@@ -18,17 +18,6 @@ app.use(morgan('combined'));
 
 //content details
 var articles = {
-    'article-one': {
-    title: 'Article-One',
-    heading: 'Article-One',
-    date: 'Sep 5, 2016',
-    content: `<p>
-                    Thies is One Article.
-                </p>
-                <p>
-                    <a href="/">Home</a>
-                </p>`
-    },
     'article-two': {
         title: 'Aritcle-Two',
         heading: 'Article-Two',

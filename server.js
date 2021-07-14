@@ -6,11 +6,11 @@ var Pool = require('pg').Pool;  //import db-connection
 
 //config db
 var config = {
-    user: 'mritunjaysri',
-    database: 'mritunjaysri',
-    host: 'db.imad.hasura-app.io',
-    port: '5432',
-    password: 'db-mritunjaysri-34582'
+    user: {USER_NQME},
+    database: '{DB}',
+    host: '{HOST}',
+    port: '{PORT',
+    password: '{PASSWORD}'
 };
 
 var app = express();
